@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Leave a Review</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <h1>Leave a Review</h1>
+    <form method="POST" action="/leave_review">
+        <label for="review_text">Review:</label>
+        <textarea id="review_text" name="review_text" required></textarea><br>
+
+        <button type="submit">Submit Review</button>
+    </form>
+    <br><a href="/">Back to Home</a>
+</body>
+</html>

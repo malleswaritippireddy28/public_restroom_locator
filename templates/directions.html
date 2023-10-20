@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Washroom Finder</title>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" />
+    <style>
+        #map {
+            height: 400px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Directions from My Location</h1>
+    <div id="map"></div>
+
+    <button id="giveFeedback">Give Feedback</button>
+    <button id="readFeedback">Read Feedback</button>
+
+    <div id="feedbackForm" style="display: none;">
+        <h2>Feedback Form</h2>
+        <label for="washroomSelection">Select a washroom:</label>
+        <select id="washroomSelection">
+            <option value="Location 2">Location 2</option>
+            <option value="Location 3">Location 3</option>
+            <option value="Location 4">Location 4</option>
+            <option value="Location 5">Location 5</option>
+        </select>
+        <textarea id="feedbackText" placeholder="Enter your feedback"></textarea>
+        <button id="submitFeedback">Submit Feedback</button>
+    </div>
+
+    <div id="feedbackDisplay" style="display: none;">
+        <h2>Feedback for Washroom</h2>
+        <select id="washroomDisplaySelection">
+            <option value="Location 2">Location 2</option>
+            <option value="Location 3">Location 3</option>
+            <option value="Location 4">Location 4</option>
+            <option value="Location 5">Location 5</option>
+        </select>
+        <div id="feedbackList"></div>
+    </div>
+
+    <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
+    <script src="https://unpkg.com/leaflet-routing-machine@3.2.12/dist/leaflet-routing-machine.js"></script>
+    <script src="https://unpkg.com/leaflet-geolocation@3.0.2/dist/leaflet-geolocation.js"></script>
+    <script src="{{ url_for('static', filename='map.js') }}"></script>
+</body>
+</html>

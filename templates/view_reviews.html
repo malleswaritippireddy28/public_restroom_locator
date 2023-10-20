@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>View Reviews</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <h1>View Reviews</h1>
+    <ul>
+        {% for review in reviews %}
+            <li>{{ review[1] }} says: {{ review[2] }}</li>
+        {% endfor %}
+    </ul>
+    <br><a href="/">Back to Home</a>
+</body>
+</html>
