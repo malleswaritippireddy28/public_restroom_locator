@@ -1,5 +1,5 @@
 document.addEventListener('DOMContentLoaded', function () {
-    var map = L.map('map').setView([11.0168, 76.9558], 13);
+    var map = L.map('map').setView([33.2533791,97.1552006], 13);
 
     L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
         maxZoom: 19,
@@ -7,32 +7,32 @@ document.addEventListener('DOMContentLoaded', function () {
 
     var routingControl = L.Routing.control({
         waypoints: [
-            L.latLng(11.0168, 76.9558),
-            L.latLng(11.0055, 76.9665),
+            L.latLng(33.2533791,97.1552006),
+            L.latLng(33.2539723,97.1519193),
         ],
     }).addTo(map);
 
     var locations = [
         {
-            coordinates: [11.0164, 76.9681],
+            coordinates: [33.26083, 97.10863],
             name: 'Location 2',
             rating: 4.5,
             reviews: ['Great place!', 'Clean facilities.'],
         },
         {
-            coordinates: [10.9914, 76.9660],
+            coordinates: [33.249791, 97.1620068],
             name: 'Location 3',
             rating: 3.8,
             reviews: ['Good service.', 'Could be cleaner.'],
         },
         {
-            coordinates: [11.0249, 77.0315],
+            coordinates: [33.2608317, 97.1086262],
             name: 'Location 4',
             rating: 4.2,
             reviews: ['Nice atmosphere.', 'Friendly staff.'],
         },
         {
-            coordinates: [11.0097, 76.9539],
+            coordinates: [33.2299119, 97.1552081],
             name: 'Location 5',
             rating: 4.7,
             reviews: ['Excellent!', 'Very well-maintained.'],
